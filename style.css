@@ -313,6 +313,7 @@ transition: background-color 0.3s;
 
     .calendar-block td {
         display: block;
+        border: 1px solid #ddd; /* Přidá ohraničení k jednotlivým buňkám */
         width: 100%; /* Buňky zaberou celou šířku rodiče */
         text-align: center; /* Zarovná text na střed */
         padding: 10px; /* Přidá prostor uvnitř buněk */
@@ -325,7 +326,7 @@ transition: background-color 0.3s;
         display: block; /* Zobrazí popisek na samostatném řádku */
         margin-bottom: 5px; /* Odstup mezi popiskem a hodnotou */
         text-transform: uppercase; /* Velká písmena pro popisky */
-        color: #006105; /* Barva popisků */
+        color: #000000; /* Barva popisků */
         text-align: center; /* Zarovná popisky na střed */
     }
 }
