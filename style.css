@@ -37,6 +37,7 @@ table td{
 
 .calendar-block table {
     width: 100%; /* Tabulka zabírá celou šířku bloku */
+    table-layout: fixed; /* Fixní rozvržení, které zajistí rovnoměrnou šířku buněk */
 }
 
 .calendar-block tr:nth-child(odd) {
@@ -47,10 +48,10 @@ table td{
     background-color: white; /* Bílá pro liché řádky */
 }
 
-.calendar-block td, .calendar-block th {
-    border: 1px solid #ddd; /* Jemné okraje mezi buňkami */
-    padding: 12px; /* Větší odsazení buňky pro vzdušnější vzhled */
-    text-align: center; /* Zarovnání obsahu na střed */
+.calendar-block th, .calendar-block td {
+    width: 50%; /* Každá buňka zabírá 50 % šířky, pokud máte dvě sloupce */
+    text-align: center; /* Obsah zarovnaný na střed */
+    word-wrap: break-word; /* Zalomí dlouhý text do dalšího řádku */
 }
 
 .calendar-block th {
@@ -265,42 +266,59 @@ transition: background-color 0.3s;
         color: white;
     }
 
-    /*všechno ohledně tabulky*/
-    table {
-        display: block; /* Tabulka jako blok */
-        overflow-x: auto; /* Povolení horizontálního posouvání */
-        white-space: nowrap; /* Zabrání zalamování textu */
+    /*všechno ohledne kalendaru*/
+    .calendars-container {
+        display: flex;
+        flex-direction: column; /* Kalendáře se zobrazí pod sebou */
+        align-items: center; /* Zarovná kalendáře na střed */
+        gap: 20px; /* Mezera mezi kalendáři */
     }
 
-    th, td {
-        display: block; /* Buňky se zobrazí pod sebou */
-        width: 100%; /* Buňky zabírají celou šířku */
-        box-sizing: border-box;
+    .calendar-block {
+        width: 100%; /* Kalendář zabere celou šířku rodiče */
+        max-width: 800px; /* Volitelně omezíte maximální šířku na větších obrazovkách */
+        margin: 0 auto; /* Zarovná kalendář na střed */
+        padding: 10px;
+        background: #fff; /* Volitelně přidáte pozadí */
+        border-radius: 8px; /* Kulaté rohy */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Jemný stín */
     }
 
-    th {
-        text-align: left; /* Zarovnání textu vlevo na mobilu */
+    .calendar-block table {
+        width: 100%; /* Tabulka zabere celou šířku kalendáře */
+        border-collapse: collapse; /* Sloučení okrajů buněk */
+        text-align: left; /* Zarovnání textu vlevo pro lepší čitelnost */
+        display: block; /* Přepnutí tabulky na blokový prvek */
+        overflow-x: auto; /* Umožní horizontální posouvání */
     }
 
-    .calendar-block tr {
-        margin-bottom: 10px; /* Mezera mezi "řádky" */
-        border: 1px solid #ddd; /* Ohraničení kolem řádku */
+    .calendar-block iframe {
+        width: 100%; /* Iframe zabere celou šířku rodiče */
+        height: 600px; /* Pevná výška pro konzistentní zobrazení */
     }
 
-    .calendar-block th {
-        display: none; /* Skryje hlavičku tabulky na mobilech */
+    .calendar-block h2 {
+        text-align: center; /* Zarovnání nadpisů na střed */
+        margin-bottom: 15px;
+        color: #006105; /* Zelená barva nadpisů */
+    }
+
+    table th {
+        display: none; /* Skryje všechny hlavičky tabulky */
     }
 
     .calendar-block td {
-        padding: 10px;
-        text-align: left; /* Zarovná text vlevo */
+        display: block; /* Zobrazení buněk jako blok */
+        width: 100%; /* Buňky zabírají celou šířku */
+        text-align: left; /* Zarovnání obsahu vlevo */
     }
 
     .calendar-block td:before {
-        content: attr(data-label); /* Přidá "popisky" z hlaviček */
-        font-weight: bold;
-        text-transform: uppercase;
-        margin-right: 10px;
-        display: inline-block;
+        content: attr(data-label); /* Přidá název sloupce před hodnotu */
+        font-weight: bold; /* Tučné písmo pro popisek */
+        display: block; /* Zobrazí popisek na samostatném řádku */
+        margin-bottom: 5px; /* Odstup mezi popiskem a hodnotou */
+        text-transform: uppercase; /* Velká písmena pro popisky */
+        color: #006105; /* Barva popisků */
     }
 }
