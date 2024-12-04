@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Místní park</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Místní park</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">O parku</a></li>
+      <li><a href="#prvnitext">Kalendář akcí</a></li>
+      <li><a href="kontakt.html">Kontaktujte nás</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-text" id="#prvnitext">Kalendář Akcí</div>
+  </div>
+  <div style="margin: 20px 0;padding: 20px;background: #f4f4f4;border-radius: 8px;text-align: center" id="prvnitext">
+    <h2>Kalendář akcí v našem parku</h2>
+    <p>Náš park je víc než jen místo pro relaxaci – je to místo, kde se neustále něco děje! Po celý rok pro vás připravujeme pestrý program plný zábavy, kultury, sportu a vzdělávání. Ať už hledáte zábavu pro celou rodinu, chcete si užít koncert pod širým nebem, nebo se zapojit do zajímavých workshopů, u nás si přijdete na své.</p>
+    <p>Pravidelně aktualizujeme náš kalendář akcí, abyste měli vždy přehled o tom, co se chystá. Vyberte si tu pravou událost pro sebe a přijďte zažít nezapomenutelné chvíle v srdci přírody!</p>
+  </div>
+  <div class="calendars-container">
+    <!-- Staromódní kalendář -->
+    <div class="calendar-block">
+      <h2>Staromódní kalendář</h2>
+      <table style="border-collapse: collapse; width: 100%; border: 1px solid black;">
+        <tr>
+          <th>Den</th>
+          <th>Akce</th>
+        </tr>
+        <tr>
+          <td>2. prosince</td>
+          <td>Jóga a relaxační hudba</td>
+        </tr>
+        <tr>
+          <td>8. prosince</td>
+          <td>Kurz dýchání</td>
+        </tr>
+        <tr>
+          <td>10. prosince</td>
+          <td>Výsadba stromů</td>
+        </tr>
+        <tr>
+          <td>14. prosince</td>
+          <td>Poznávání přírody</td>
+        </tr>
+        <tr>
+          <td>17. prosince</td>
+          <td>Výročí parku</td>
+        </tr>
+        <tr>
+          <td>21. prosince</td>
+          <td>Adventní koncert</td>
+        </tr>
+        <tr>
+          <td>23. prosince</td>
+          <td>Lesní kvíz</td>
+        </tr>
+        <tr>
+          <td>2. ledna</td>
+          <td>Jóga a relaxační hudba</td>
+        </tr>
+        <tr>
+          <td>8. ledna</td>
+          <td>Kurz dýchání</td>
+        </tr>
+        <tr>
+          <td>10. ledna</td>
+          <td>Výsadba stromů</td>
+        </tr>
+        <tr>
+          <td>14. ledna</td>
+          <td>Poznávání přírody</td>
+        </tr>
+        <tr>
+          <td>17. ledna</td>
+          <td>Výročí parku</td>
+        </tr>
+        <tr>
+          <td>21. ledna</td>
+          <td>Adventní koncert</td>
+        </tr>
+        <tr>
+          <td>23. ledna</td>
+          <td>Lesní kvíz</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Novodobý kalendář -->
+    <div class="calendar-block">
+      <h2>Novodobý kalendář</h2>
+      <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FPrague&showPrint=0&mode=AGENDA&src=ZTFiMmM0YWM0NTAyOWM1YmMwYjljMWE5MWQ2NDM2Yzc4YTAxZWY3ODE5N2IzY2U1MDEyZDYyNTgwOGUzZTMzZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23EF6C00"
+              style="border: solid 1px #777; width: 100%; height: 600px;"
+              allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+
+
+
+</main>
+<footer style="text-align: center; padding: 10px; background-color: #f1f1f1; margin-top: 20px;">
+  &copy; 2024 Tvoje Společnost. Všechna práva vyhrazena.
+</footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+  }
+</script>
+</body>
+</html>

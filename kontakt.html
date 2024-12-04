@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontaktujte nás</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Místní park</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">O parku</a></li>
+      <li><a href="kalendar.html">Kalendář akcí</a></li>
+      <li><a href="#prvnitext">Kontaktujte nás</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="hero-text">Kontaktujte nás</div>
+  </div>
+
+  <div style="margin: 20px 0;padding: 20px;background: #f4f4f4;border-radius: 8px;text-align: center">
+    <p>Máte otázky, nápady nebo potřebujete více informací? Rádi vám pomůžeme! Jsme tu pro vás, ať už se chcete dozvědět více o našem parku, plánovaných akcích, nebo nám sdělit své podněty a návrhy.</p>
+    <ul>
+      <li>Adresa: Hradec u králů</li>
+      <li>Telefon: 123456789</li>
+      <li>E-mail: parkemail@parkemail.cz</li>
+      <li>Sociální sítě: Sledujte nás na Facebook: facebookparku nebo na Instagramu: instagramparku, kde sdílíme aktuality a zajímavosti.</li>
+    </ul>
+    <br>
+    <p>Máte raději osobní kontakt? Stavte se u nás na správě parku, kde vás rádi přivítáme. Pro rychlé dotazy můžete také využít kontaktní formulář níže. Těšíme se na vaše zprávy!</p>
+  </div>
+
+
+  <section class="content block-center" id="prvnitext">
+    <h2>Rádi vás uslyšíme</h2>
+    <form class="contact-form">
+      <label for="name">Vaše jméno:</label><br>
+      <input type="text" id="name" name="name" placeholder="Vaše jméno" required><br><br>
+
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email" placeholder="Váš e-mail" required><br><br>
+
+      <label for="message">Zpráva:</label><br>
+      <textarea id="message" name="message" placeholder="Vaše zpráva" rows="5" required></textarea><br><br>
+
+      <button type="submit">Odeslat</button>
+    </form>
+  </section>
+</main>
+
+<footer style="text-align: center; padding: 10px; background-color: #f1f1f1; margin-top: 20px;">
+  &copy; 2024 Tvoje Společnost. Všechna práva vyhrazena.
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+  }
+</script>
+</body>
+</html>

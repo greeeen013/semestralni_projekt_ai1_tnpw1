@@ -1,0 +1,248 @@
+/* Obecné nastavení */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+table td{
+    padding: 10px;
+}
+
+/* všechno ohledně kalendáře */
+.calendar-block {
+    margin: 20px auto; /* Zarovnání tabulky na střed */
+    width: 80%; /* Šířka tabulky nastavena na 80% šířky stránky */
+    border-collapse: collapse; /* Sloučení okrajů buněk */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Jemný stín pro elegantní vzhled */
+}
+
+.calendar-block iframe {
+    width: 100%; /* Šířka zůstane 100% rodičovského kontejneru */
+    height: 600px; /* Pevně nastavená výška pro lepší zobrazení */
+    border: solid 1px #777;
+}
+
+.calendar-block h2 {
+    text-align: center; /* Nadpis tabulky zarovnán na střed */
+    margin-bottom: 20px; /* Mezera pod nadpisem */
+    color: #4CAF50; /* Zelená barva nadpisu */
+}
+
+.calendar-block table {
+    width: 100%; /* Tabulka zabírá celou šířku bloku */
+}
+
+.calendar-block tr:nth-child(odd) {
+    background-color: #f9f9f9; /* Jemně šedá pro sudé řádky */
+}
+
+.calendar-block tr:nth-child(even) {
+    background-color: white; /* Bílá pro liché řádky */
+}
+
+.calendar-block td, .calendar-block th {
+    border: 1px solid #ddd; /* Jemné okraje mezi buňkami */
+    padding: 12px; /* Větší odsazení buňky pro vzdušnější vzhled */
+    text-align: center; /* Zarovnání obsahu na střed */
+}
+
+.calendar-block th {
+    background-color: #4CAF50; /* Zelená barva pro hlavičku */
+    color: white; /* Bílý text v hlavičce */
+    font-weight: bold; /* Zvýrazněné písmo */
+    text-transform: uppercase; /* Text hlavičky velkými písmeny */
+}
+
+
+
+
+/* Formulář kontaktujte nás */
+.contact-form {
+    max-width: 600px;
+    margin: 20px auto; /* Zarovná formulář na střed stránky */
+    padding: 20px;
+    background-color: #f4f4f4; /* Světle šedé pozadí */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Jemný stín */
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333; /* Tmavě šedá barva textu */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Inputy zabírají celou šířku kontejneru */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Zajištění správného výpočtu šířky */
+}
+
+.contact-form button {
+    background-color: #4CAF50; /* Zelená barva */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #45a049; /* Tmavší zelená při najetí myší */
+}
+
+/* Nadpis kontakt */
+.content h2 {
+    text-align: center;
+    color: #4CAF50; /* Zelená barva pro nadpis */
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 5px; /* Mezera mezi tlačítky */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 15px;
+    border: 2px solid #4e4c4c; /* Ohraničení pro klasická tlačítka */
+    border-radius: 5px;
+    background-color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+/* Hero sekce */
+.hero {
+    height: 40vh; /* Mírně menší než na hlavní stránce */
+    background: url('park.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; /* Parallax efekt */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero-text {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responzivní design */
+.menu-toggle {
+    display: none; /* Výchozí stav pro tlačítko ☰ */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .contact-form button {
+        width: 100%; /* Tlačítko zabere celou šířku na menších zařízeních */
+        align-self: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Zobrazí tlačítko ☰ */
+    }
+
+    .nav-links {
+        display: none; /* Skryje klasické menu na menších obrazovkách */
+        flex-direction: column;
+        position: absolute;
+        top: 55px;
+        left: 0;
+        background-color: #4CAF50;
+        width: 100%;
+        z-index: 10;
+        padding: 0; /* Zajistíme, že kontejner nemá extra padding */
+    }
+
+    .nav-links.active {
+        display: flex; /* Zobrazení skládacího menu */
+    }
+
+    .nav-links li {
+        border-bottom: 1px solid white; /* Bílé čáry mezi tlačítky */
+        margin: 0;
+        padding: 0;
+        display: flex; /* Aby text byl zarovnán ve středu */
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-links li:last-child {
+        border-bottom: none; /* Odstranění čáry pod poslední položkou */
+    }
+
+    .nav-links a {
+        font-size: 1.2rem; /* Velikost textu */
+        color: white; /* Barva textu */
+        text-align: center; /* Horizontální zarovnání textu */
+        text-decoration: none; /* Odstranění podtržení odkazu */
+        background-color: #4CAF50; /* Barva pozadí odkazu */
+        width: 100%; /* Odkaz vyplní celý prostor li */
+        height: 100%; /* Odkaz vyplní výšku položky */
+        display: flex; /* Flexbox pro obsah odkazu */
+        justify-content: center; /* Horizontální zarovnání textu */
+        align-items: center; /* Vertikální zarovnání textu */
+        border: none; /* Odstranění černého ohraničení */
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(255, 255, 255, 0.2); /* Jemná barva pozadí při hoveru */
+        color: white;
+    }
+}
