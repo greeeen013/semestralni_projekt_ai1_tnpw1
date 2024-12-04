@@ -32,7 +32,7 @@ table td{
 .calendar-block h2 {
     text-align: center; /* Nadpis tabulky zarovnán na střed */
     margin-bottom: 20px; /* Mezera pod nadpisem */
-    color: #4CAF50; /* Zelená barva nadpisu */
+    color:#006105; /* původně světlejší zelená, ale webaim řekl ne */
 }
 
 .calendar-block table {
@@ -54,7 +54,7 @@ table td{
 }
 
 .calendar-block th {
-    background-color: #4CAF50; /* Zelená barva pro hlavičku */
+    background-color: #006105; /* tmavě zelená barva pro hlavičku protože webaim původně světlejší */
     color: white; /* Bílý text v hlavičce */
     font-weight: bold; /* Zvýrazněné písmo */
     text-transform: uppercase; /* Text hlavičky velkými písmeny */
@@ -119,7 +119,7 @@ table td{
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: white;
+    color:#000000;
 }
 
 .nav-links {
@@ -132,10 +132,11 @@ table td{
 
 .nav-links li {
     margin: 0;
+
 }
 
 .nav-links a {
-    color: white;
+    color:#000000; /* osobně se mi víc líbila bílá, ale webaim říkal špatnej contrast */
     text-decoration: none;
     padding: 9px 15px;
     border: 2px solid #4e4c4c; /* Ohraničení pro klasická tlačítka */
