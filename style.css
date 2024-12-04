@@ -266,12 +266,20 @@ transition: background-color 0.3s;
     }
 
     /*všechno ohledně tabulky*/
-    .calendar-block table,
-    .calendar-block tr,
-    .calendar-block td {
-        display: block; /* Tabulka se změní na blokové zobrazení */
-        width: 100%; /* Zajistí, že každá buňka zabírá celou šířku */
-        box-sizing: border-box; /* Zajistí správné výpočty paddingu */
+    table {
+        display: block; /* Tabulka jako blok */
+        overflow-x: auto; /* Povolení horizontálního posouvání */
+        white-space: nowrap; /* Zabrání zalamování textu */
+    }
+
+    th, td {
+        display: block; /* Buňky se zobrazí pod sebou */
+        width: 100%; /* Buňky zabírají celou šířku */
+        box-sizing: border-box;
+    }
+
+    th {
+        text-align: left; /* Zarovnání textu vlevo na mobilu */
     }
 
     .calendar-block tr {
