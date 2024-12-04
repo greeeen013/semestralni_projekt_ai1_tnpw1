@@ -264,4 +264,35 @@ transition: background-color 0.3s;
         background-color: rgba(255, 255, 255, 0.2); /* Jemná barva pozadí při hoveru */
         color: white;
     }
+
+    /*všechno ohledně tabulky*/
+    .calendar-block table,
+    .calendar-block tr,
+    .calendar-block td {
+        display: block; /* Tabulka se změní na blokové zobrazení */
+        width: 100%; /* Zajistí, že každá buňka zabírá celou šířku */
+        box-sizing: border-box; /* Zajistí správné výpočty paddingu */
+    }
+
+    .calendar-block tr {
+        margin-bottom: 10px; /* Mezera mezi "řádky" */
+        border: 1px solid #ddd; /* Ohraničení kolem řádku */
+    }
+
+    .calendar-block th {
+        display: none; /* Skryje hlavičku tabulky na mobilech */
+    }
+
+    .calendar-block td {
+        padding: 10px;
+        text-align: left; /* Zarovná text vlevo */
+    }
+
+    .calendar-block td:before {
+        content: attr(data-label); /* Přidá "popisky" z hlaviček */
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+        display: inline-block;
+    }
 }
