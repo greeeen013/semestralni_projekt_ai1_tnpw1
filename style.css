@@ -54,7 +54,7 @@ table td{
 }
 
 .calendar-block th {
-    background-color: #006105; /* tmavě zelená barva pro hlavičku protože webaim původně světlejší */
+    background-color: #006105; /* tmavě zelená barva pro hlavičku protože webaim... původně světlejší */
     color: white; /* Bílý text v hlavičce */
     font-weight: bold; /* Zvýrazněné písmo */
     text-transform: uppercase; /* Text hlavičky velkými písmeny */
@@ -89,19 +89,32 @@ table td{
 }
 
 .contact-form button {
-    background-color: #4CAF50; /* Zelená barva */
-    color: white;
+    background-color: #4CAF50;
+    color:#000000;
     padding: 10px 20px;
-    border: none;
+    text-decoration: none;
+    border: 2px solid #4e4c4c;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: #45a049; /* Tmavší zelená při najetí myší */
+.contact-form button:hover { /*na tohle tlačítko jsem dal jinačí barvy než jsou na jiných tlačítkách protože tady je moc bílý a pak to nevypadá tak hezky*/
+    background-color: black;
+    color: white;
 }
+
+/*.contact-form button {
+    background-color: #4CAF50;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s;
+}*/
 
 /* Nadpis kontakt */
 .content h2 {
@@ -136,12 +149,12 @@ table td{
 }
 
 .nav-links a {
+    background-color: #4CAF50;
     color:#000000; /* osobně se mi víc líbila bílá, ale webaim říkal špatnej contrast */
-    text-decoration: none;
     padding: 9px 15px;
+    text-decoration: none;
     border: 2px solid #4e4c4c; /* Ohraničení pro klasická tlačítka */
     border-radius: 5px;
-    background-color: #4CAF50;
     transition: all 0.3s ease;
 }
 
