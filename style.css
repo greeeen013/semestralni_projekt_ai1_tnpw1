@@ -136,6 +136,7 @@ transition: background-color 0.3s;
 }
 
 .nav-links {
+    color: black;
     list-style: none;
     display: flex;
     margin: 0;
@@ -189,7 +190,7 @@ transition: background-color 0.3s;
 .menu-toggle {
     display: none; /* Výchozí stav pro tlačítko ☰ */
     background-color: #4CAF50;
-    color: white;
+    color: black;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
@@ -226,6 +227,10 @@ transition: background-color 0.3s;
 
     .nav-links.active {
         display: flex; /* Zobrazení skládacího menu */
+    }
+
+    .nav-links.active a{
+        color:#000000; /* osobně se mi víc líbila bílá, ale webaim říkal špatnej contrast */
     }
 
     .nav-links li {
