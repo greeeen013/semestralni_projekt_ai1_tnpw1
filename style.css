@@ -1,6 +1,7 @@
 /* Obecné nastavení */
 body {
     margin: 0;
+    overflow-x: hidden; /* Skryje nechtěné horizontální posouvání */
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -274,6 +275,9 @@ transition: background-color 0.3s;
         gap: 20px; /* Mezera mezi kalendáři */
     }
 
+
+
+
     .calendar-block {
         width: 100%; /* Kalendář zabere celou šířku rodiče */
         max-width: 800px; /* Volitelně omezíte maximální šířku na větších obrazovkách */
@@ -281,15 +285,15 @@ transition: background-color 0.3s;
         padding: 10px;
         background: #fff; /* Volitelně přidáte pozadí */
         border-radius: 8px; /* Kulaté rohy */
+        overflow-x: hidden; /* Skryje horizontální posouvání */
+        box-sizing: border-box; /* Zahrne padding a border do šířky */
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Jemný stín */
     }
 
     .calendar-block table {
         width: 100%; /* Tabulka zabere celou šířku kalendáře */
-        border-collapse: collapse; /* Sloučení okrajů buněk */
-        text-align: left; /* Zarovnání textu vlevo pro lepší čitelnost */
-        display: block; /* Přepnutí tabulky na blokový prvek */
-        overflow-x: auto; /* Umožní horizontální posouvání */
+        table-layout: fixed; /* Rovnoměrné rozdělení buněk */
+        border-collapse: collapse; /* Sloučí okraje buněk */
     }
 
     .calendar-block iframe {
@@ -308,9 +312,11 @@ transition: background-color 0.3s;
     }
 
     .calendar-block td {
-        display: block; /* Zobrazení buněk jako blok */
-        width: 100%; /* Buňky zabírají celou šířku */
-        text-align: left; /* Zarovnání obsahu vlevo */
+        display: block;
+        width: 100%; /* Buňky zaberou celou šířku rodiče */
+        text-align: center; /* Zarovná text na střed */
+        padding: 10px; /* Přidá prostor uvnitř buněk */
+        box-sizing: border-box; /* Zahrne padding do šířky */
     }
 
     .calendar-block td:before {
@@ -320,5 +326,6 @@ transition: background-color 0.3s;
         margin-bottom: 5px; /* Odstup mezi popiskem a hodnotou */
         text-transform: uppercase; /* Velká písmena pro popisky */
         color: #006105; /* Barva popisků */
+        text-align: center; /* Zarovná popisky na střed */
     }
 }
