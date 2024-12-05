@@ -301,7 +301,7 @@ transition: background-color 0.3s;
         height: 600px; /* Pevná výška pro konzistentní zobrazení */
     }
 
-    .calendar-block h2 {
+    .calendar-block h2 { /*nadpis tabulky*/
         text-align: center; /* Zarovnání nadpisů na střed */
         margin-bottom: 15px;
         color: #006105; /* Zelená barva nadpisů */
@@ -311,22 +311,22 @@ transition: background-color 0.3s;
         display: none; /* Skryje všechny hlavičky tabulky */
     }
 
-    .calendar-block td {
+
+
+    .calendar-block td { /*obsah*/
         display: block;
         border: 1px solid #ddd; /* Přidá ohraničení k jednotlivým buňkám */
         width: 100%; /* Buňky zaberou celou šířku rodiče */
-        text-align: center; /* Zarovná text na střed */
+        text-align: left; /* Zarovná text na střed */
         padding: 10px; /* Přidá prostor uvnitř buněk */
         box-sizing: border-box; /* Zahrne padding do šířky */
     }
 
     .calendar-block td:before {
-        content: attr(data-label); /* Přidá název sloupce před hodnotu */
-        font-weight: bold; /* Tučné písmo pro popisek */
-        display: block; /* Zobrazí popisek na samostatném řádku */
-        margin-bottom: 5px; /* Odstup mezi popiskem a hodnotou */
-        text-transform: uppercase; /* Velká písmena pro popisky */
-        color: #000000; /* Barva popisků */
-        text-align: center; /* Zarovná popisky na střed */
+        content: attr(data-label); /* Přidá "popisky" z hlaviček */
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+        display: inline-block;
     }
 }
