@@ -4,7 +4,7 @@
 
 Vítejte v repozitáři projektu **Místní park**. Tento projekt představuje jednoduchou webovou stránku poskytující informace o místním parku, jeho historii, plánovaných akcích a kontaktních údajích.
 
-> 🏫 Tento projekt vznikl jako **semestrální práce** do předmětu **TNPW1 – Tvorba webových stránek** na [Univerzitě Hradec Králové](https://www.uhk.cz) v rámci zimního semestru.
+> 🏫 Tento projekt vznikl jako **semestrální práce** do předmětu **Technologie pro publikování na Webu I – Tvorba webových stránek** na [Univerzitě Hradec Králové](https://www.uhk.cz) v rámci zimního semestru.
 
 ## Struktura projektu
 
