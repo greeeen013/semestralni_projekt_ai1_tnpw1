@@ -1,8 +1,10 @@
 # Místní park
 
+🌐 [Zobrazit webovou stránku projektu](https://greeeen013.github.io/semestralni_projekt_ai1_tnpw1/)
+
 Vítejte v repozitáři projektu **Místní park**. Tento projekt představuje jednoduchou webovou stránku poskytující informace o místním parku, jeho historii, plánovaných akcích a kontaktních údajích.
 
-> 🏫 Tento projekt vznikl jako **semestrální práce** do předmětu **TNPW1 – Tvorba webových stránek** na **Univerzitě Hradec Králové** v rámci zimního semestru.
+> 🏫 Tento projekt vznikl jako **semestrální práce** do předmětu **TNPW1 – Tvorba webových stránek** na [Univerzitě Hradec Králové](https://www.uhk.cz) v rámci zimního semestru.
 
 ## Struktura projektu
 
@@ -24,7 +26,7 @@ Vítejte v repozitáři projektu **Místní park**. Tento projekt představuje j
 - **HTML5** – pro strukturu webu
 - **CSS3** – pro stylování a design
 
-## Jak projekt spustit
+## Jak projekt spustit lokálně
 
 1. Naklonujte tento repozitář:
 
